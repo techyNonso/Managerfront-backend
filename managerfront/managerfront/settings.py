@@ -116,7 +116,7 @@ CHANNEL_LAYERS = {
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "vemon",
+        "NAME": "manager-front",
         "USER": "postgres",
         "PASSWORD": "12345",
         "HOST": "localhost",

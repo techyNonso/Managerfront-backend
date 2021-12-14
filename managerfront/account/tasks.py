@@ -1,4 +1,4 @@
-from celery.decorators import task
+#from celery.decorators import task
 from managerfront.email import send_email_to
 from celery.utils.log import get_task_logger
 from celery import shared_task
