@@ -25,11 +25,11 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "SECRET_KEY=y)*+-@%x=)km+m)kh65-#wl8o*j9ku2cc%zyl88m0c+8nnf%8o"
+SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = config("DEBUG", cast=bool, default=True)
 
-ALLOWED_HOSTS = ["127.0.0.1","178.62.15.167"]
+ALLOWED_HOSTS = ["127.0.0.1"]
 
 
 # Application definition
@@ -116,9 +116,9 @@ CHANNEL_LAYERS = {
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "managerfront",
-        "USER": "william",
-        "PASSWORD": "William=19?",
+        "NAME": "manager-front",
+        "USER": "postgres",
+        "PASSWORD": "12345",
         "HOST": "localhost",
     }
 }
@@ -223,7 +223,7 @@ SIMPLE_JWT = {
 
 
 # celery variables
-CELERY_BROKER_URL = "redis://localhost:6379/0"
+CELERY_BROKER_URL = config("REDIS_URL")
 CELERY_ACCEPT_CONTENT = ["json"]
 CELERY_TASK_SERIALIZER = "json"
 
