@@ -29,7 +29,7 @@ SECRET_KEY = "SECRET_KEY=y)*+-@%x=)km+m)kh65-#wl8o*j9ku2cc%zyl88m0c+8nnf%8o"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["127.0.0.1","178.62.15.167"]
+ALLOWED_HOSTS = ["178.62.15.167"]
 
 
 # Application definition
@@ -166,7 +166,7 @@ STATIC_URL = "/static/"
 CORS_ORIGIN_ALLOW_ALL = True
 
 
-ALLOWED_HOSTS = ["*"]
+#ALLOWED_HOSTS = ["*"]
 
 """
 EMAIL_USE_TLS = True
