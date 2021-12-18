@@ -1,0 +1,10 @@
+[Unit]
+Description=gunicorn daemon
+After=network.target
+[Service]
+User=chukwunonso
+Group=www-data
+WorkingDirectory=/home/chukwunonso/managerfrontFolder/Managerfront-backend
+ExecStart=/home/chukwunonso/managerfrontFolder/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/chukwunonso/managerfrontFolder/Managerfront-backend.sock managerfront.wsgi:application
+[Install]
+WantedBy=multi-user.target
